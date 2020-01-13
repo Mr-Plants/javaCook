@@ -23,6 +23,10 @@ public class Loop {
         } while (b > 0);
 
 //        3. for循环
-
+        for (int i = 0; i < 4; i++) {
+            if (i == 2) continue;
+//            if (i == 2) break;
+            System.out.println(i);
+        }
     }
 }
