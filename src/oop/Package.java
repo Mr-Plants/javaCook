@@ -1,7 +1,7 @@
 package oop;
 
 /**
- * 封装：将数据和方法
+ * 封装：将数据和对数据操作的方法放在一起
  */
 public class Package {
     double price;
