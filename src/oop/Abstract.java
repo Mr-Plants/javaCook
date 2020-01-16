@@ -4,6 +4,21 @@ package oop;
  * 抽象类和抽象方法
  */
 public class Abstract extends Basic {
+    private String name = "233";
+
+    // 内部类，作为外部类的成员，可以访问外部类的属性和方法
+    class Abc {
+
+    }
+
+//    new一个对象的时候给出类的定义就形成了匿名类，属于内部类
+
+    /**
+     * 分两类：类内部，函数内部
+     * 当在函数内部时，可以访问函数里final的变量
+     * 匿名类可以继承，也可以实现某接口
+     */
+
     @Override
     public void run() {
 //        子类必须实现抽象类的方法，否则自己就成了抽象类
