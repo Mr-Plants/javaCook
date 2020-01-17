@@ -10,4 +10,8 @@ public class ByeHandler extends Handler {
     public boolean isBye() {
         return true;
     }
+
+    ByeHandler(CastleGame game) {
+        super(game);
+    }
 }

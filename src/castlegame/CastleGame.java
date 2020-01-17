@@ -54,12 +54,12 @@ public class CastleGame {
     }
 
     private void creatHandler() {
-        handlers.put("go", new GoHandler());
-        handlers.put("bye", new ByeHandler());
-        handlers.put("help", new HelpHandler());
+        handlers.put("go", new GoHandler(this));
+        handlers.put("bye", new ByeHandler(this));
+        handlers.put("help", new HelpHandler(this));
     }
 
-    private void goRoom(String direction) {
+    public void goRoom(String direction) {
         Room nextRoom = currentRoom.getExit(direction);
         if (nextRoom != null) {
             currentRoom = nextRoom;
@@ -85,11 +85,11 @@ public class CastleGame {
             if (hd != null) {
                 hd.doCommand(str);
                 if (hd.isBye()) {
-                    sc.close();
                     break;
                 }
             }
         }
+        sc.close();
     }
 
     public static void main(String[] args) {
